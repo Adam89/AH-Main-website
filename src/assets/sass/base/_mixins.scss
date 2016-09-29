@@ -32,3 +32,12 @@
 		@media (max-width: 320px)  { @content ; }
 	}
 }
+
+
+
+// calculate EM values use font-size: em(24px);
+
+@function em($target, $context: $base__font-size) {
+	@return ($target / $context) * 1em;
+}
+

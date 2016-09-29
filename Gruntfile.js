@@ -108,7 +108,7 @@ module.exports = function(grunt) {
             },
             js: {
                 files: [dir.src.js + '/*.js'],
-                tasks: ['copy:js__Dev'],
+                tasks: ['browserify'],
 
             },
             sass: {
@@ -194,7 +194,7 @@ module.exports = function(grunt) {
                     map: false,
                     processors: [
                         require('pixrem')(), // add fallbacks for rem units
-                        require('autoprefixer-core')({ browsers: 'last 2 versions' }), // add vendor prefixes
+                        require('autoprefixer')({ browsers: 'last 2 versions' }), // add vendor prefixes
                         require('cssnano')() // minify the result
                     ]
                 },
@@ -207,7 +207,7 @@ module.exports = function(grunt) {
                     },
                     processors: [
                         require('pixrem')(), // add fallbacks for rem units
-                        require('autoprefixer-core')({ browsers: 'last 2 versions' }), // add vendor prefixes
+                        require('autoprefixer')({ browsers: 'last 2 versions' }), // add vendor prefixes
                     ]
                 },
             }

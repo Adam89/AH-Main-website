@@ -40,6 +40,7 @@ body {
     line-height:1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-size: 0px;
 }
 article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section {
@@ -101,11 +102,14 @@ input, select {
 }
 
 // Base
-@import 'base/colors';
+@import 'base/config';
+@import 'base/fonts';
 @import 'base/forms';
 @import 'base/mixins';
+@import 'base/global';
 
 // Modules
 @import 'modules/header';
+@import 'modules/overlay';
 @import 'modules/section';
 @import 'modules/footer';

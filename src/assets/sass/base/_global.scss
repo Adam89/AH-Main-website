@@ -1,0 +1,13 @@
+body {
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+#wrapper {
+	margin: 0px auto;
+}
