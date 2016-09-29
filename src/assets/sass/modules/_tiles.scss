@@ -1,0 +1,96 @@
+#one {
+    width: 100%;
+    display: inline-flex;
+    @media (max-width: 768px) {
+        display: block;
+    }
+    .tile-1 {
+        width: 40%;
+        background-image: url('/assets/images/pic01.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 576px;
+        min-height: 250px;
+        overflow: hidden;
+        position: relative;
+        transition: transform 0.25s ease, opacity 0.25s ease, filter 1s ease, -webkit-filter 1s ease;
+        &:before {
+            background-color: #6fc3df;
+            transition: opacity 0.5s ease;
+            bottom: 0;
+            content: '';
+            display: block;
+            height: 100%;
+            left: 0;
+            opacity: 0.85;
+            position: absolute;
+            width: 100%;
+            z-index: 2;
+        }
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+        &__inner {
+            margin: 0px auto;
+            width: 100%;
+            padding: 0px;
+            h3 {
+                position: absolute;
+                font-size: 40px;
+                z-index: 999999;
+                width: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                color: $white;
+            }
+        }
+    }
+    .tile-2 {
+        width: 60%;
+        background-image: url('/assets/images/pic02.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 576px;
+        min-height: 250px;
+        overflow: hidden;
+        position: relative;
+        &:before {
+            background-color: #8d82c4;
+            transition: opacity 0.5s ease;
+            bottom: 0;
+            content: '';
+            display: block;
+            height: 100%;
+            left: 0;
+            opacity: 0.85;
+            position: absolute;
+            width: 100%;
+            z-index: 2;
+        }
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+        &__inner {
+            margin: 0px auto;
+            width: 100%;
+            padding: 0px;
+            color: $white;
+            h3 {
+                position: absolute;
+                font-size: 40px;
+                z-index: 999999;
+                width: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                padding: 10px;
+                color: $white;
+            }
+        }
+    }
+}
