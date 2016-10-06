@@ -2,8 +2,11 @@
 global.jQuery = require('jquery');
 global.$ = jQuery;
 
+require('./libs/slick.js');
+
 // Modules
 var nav = require('./modules/nav')();
+var slider = require('./modules/slider')();
 
 // Bootstrapping
 $(function() {
@@ -11,5 +14,6 @@ $(function() {
     "use strict";
 
     nav.init();
+    slider.init();
 
 });

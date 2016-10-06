@@ -1,4 +1,4 @@
-#one {
+    #one {
     width: 100%;
     display: inline-flex;
     overflow: hidden;
@@ -30,6 +30,9 @@
             z-index: 2;
             overflow: hidden;
         }
+         &:hover {
+                opacity: 0.5;
+            }
         &__colour--Orange {
             &:before {
                 background-color: orange;
@@ -49,6 +52,9 @@
             transform: translate(-50%, -50%);
             text-align: center;
             color: $white;
+            &:hover {
+                color: $black;
+            }
         }
     }
     .tile-2 {
@@ -74,26 +80,32 @@
             width: 100%;
             z-index: 2;
         }
+         &:hover {
+                opacity: 0.5;
+            }
         &__colour--red {
             &:before {
                 background-color: red;
                 opacity: 0.85;
             }
         }
-    }
-    @media (max-width: 768px) {
-        width: 100%;
-    }
-    h3 {
-        position: absolute;
-        font-size: 40px;
-        z-index: 999999;
-        width: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        padding: 10px;
-        color: $white;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+        h3 {
+            position: absolute;
+            font-size: 40px;
+            z-index: 999999;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 10px;
+            color: $white;
+             &:hover {
+                color: $black;
+            }
+        }
     }
 }

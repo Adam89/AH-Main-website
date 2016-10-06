@@ -101,6 +101,9 @@ input, select {
     vertical-align:middle;
 }
 
+// libs
+@import 'libs/slick';
+
 // Base
 @import 'base/config';
 @import 'base/fonts';
@@ -113,4 +116,9 @@ input, select {
 @import 'modules/overlay';
 @import 'modules/hero';
 @import 'modules/tiles';
+@import 'modules/slide';
 @import 'modules/footer';
+
+
+
+
