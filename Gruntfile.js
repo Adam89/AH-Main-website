@@ -100,14 +100,14 @@ module.exports = function(grunt) {
         watch: {
             grunt: {
                 files: ['Gruntfile.js'],
-
+                 tasks: ['default'],
             },
             assemble: {
                 files: [dir.src.templates + '/**/*.hbs'],
                 tasks: ['assemble:dev'],
             },
             js: {
-                files: [dir.src.js + '/*.js'],
+                files: [dir.src.js + '/**/*.js'],
                 tasks: ['browserify'],
 
             },

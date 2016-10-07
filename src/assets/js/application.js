@@ -7,6 +7,7 @@ require('./libs/slick.js');
 // Modules
 var nav = require('./modules/nav')();
 var slider = require('./modules/slider')();
+var test = require('./modules/test')();
 
 // Bootstrapping
 $(function() {
@@ -15,5 +16,7 @@ $(function() {
 
     nav.init();
     slider.init();
+    test.init();
 
 });
+
