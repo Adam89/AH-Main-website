@@ -33,7 +33,74 @@ bodyClass: home
             <div class="item blue"> item 1</div>
         </div>
         <div class="controllers">
-            <span class="prev fa fa-angle-right"> < </span>
-            <span class="next fa fa-angle-left"> > </span>
+            <span class="prev"> < </span>
+            <span class="next"> > </span>
         </div>
     </div>
+
+<footer>
+
+
+		<img src="/assets/images/footer-logo.png">
+
+	<article>
+
+		<ul>
+
+			<li>
+
+				<h3>email</h3>
+
+				<a href="mailto:adamhopkins87@gmail.com?subject=I'm looking for...">adamhopkins87@gmail.com</a>
+
+			</li>
+
+			<li>
+
+				<h3>Phone</h3>
+
+				<span>07888667143</span>
+
+			</li>
+
+			<li>
+
+				<h3>Github</h3>
+
+				<span>www.dkdkd.com</span>
+
+			</li>
+
+		</ul>
+
+	</article>
+
+	<section id="peopleModule">
+
+		<h1>people</h1>
+
+		<input type="text" placeholder="name">
+
+		<button id="addPerson">add person</button>
+
+		<ul id="people">
+			<script id="people-template" type="text/template">
+
+				{{#people}}
+					<li>
+						<span>{{.}}</span>
+						<i class="del">X</i>
+					</li>
+				{{/people}}
+
+			</script>
+		</ul>
+
+
+	</section>
+
+
+
+
+
+</footer>

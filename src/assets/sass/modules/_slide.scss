@@ -28,21 +28,25 @@
     text-align: center;
     .prev {
         position: absolute;
-        bottom: 47%;
+        bottom: 50%;
         left: 0%;
+        top: 50%;
     }
     .next {
         position: absolute;
-        bottom: 47%;
+        bottom: 50%;
         right: 0%;
+        top: 50%;
     }
     span {
         font-size: 40px;
         display: inline-block;
         padding: 4px 8px;
         color: #fff;
-        background-color: blue;
+        background-color: #2a2f4a;
         margin: 0px auto;
         cursor: pointer;
+        height: 55px;
+        opacity: 0.8;
     }
 }

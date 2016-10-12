@@ -7,18 +7,81 @@ function test() {
 
     method.init = function() {
 
-        method.functionTest(9,8);
-    };
-
-
-    method.functionTest = function(width,height) {
-
-        console.log( width * height);
-
+        method.functionTest();
     };
 
 
 
-    return method;
+	method.functionTest = function() {
+
+		var person = {
+
+			firstname: 'adam', 
+			lastname: 'hopkins',
+			address: {
+				street: '23 frome road',
+				city: 'london',
+				state: 'haringey'
+			}
+
+		};
+
+		console.log(person);
+
+
+};
+return method;
 
 }
+ 
+
+
+  // 	var myModule = {
+    // 		name: 'will',
+    // 		age: 34,
+    // 		sayName: function() {
+    // 		console.log(this.name);
+    // 		},
+    // 		setName: function(newName) {
+    // 			this.name = newName;
+    // 		}
+    // 	};
+    // 		myModule.setName('adam');
+    // 		myModule.sayName();
+    // };
+
+
+    	//     var people = {
+	//         people: ['adam'],
+
+	//         init: function() {
+
+	//             this.cacheDom();
+	//             this.render();
+
+	//         },
+
+	//         cacheDom: function() {
+	//             this.$el = $('#peopleModule');
+	//             this.$button = this.el.find('button');
+	//             this.$input = this.$el.find('input');
+	//             this.$ul = this.$el.find('ul');
+	//             this.source = this.$el.find('#people-template').html();
+
+
+	//         },
+
+	            	      
+
+	//         render: function() {
+
+	//             var data = {
+	//                 people: this.people,
+	//             };
+
+	//             this.$ul.find('ul').html(Handlebars.compile(this.source, data));
+	//         }
+	//     };
+
+	    
+	// };
