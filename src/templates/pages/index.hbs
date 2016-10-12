@@ -84,9 +84,10 @@ bodyClass: home
 		<button id="addPerson">add person</button>
 
 		<ul id="people">
-			<script id="people-template" type="text/template">
 
-				{{#people}}
+			<script id="people-template" type="text/x-handlebars-template">
+
+				{{people}}
 					<li>
 						<span>{{.}}</span>
 						<i class="del">X</i>
@@ -94,6 +95,7 @@ bodyClass: home
 				{{/people}}
 
 			</script>
+
 		</ul>
 
 
@@ -104,3 +106,4 @@ bodyClass: home
 
 
 </footer>
+

@@ -14,20 +14,29 @@ function test() {
 
 	method.functionTest = function() {
 
-		var person = {
+		// var person = {
 
-			firstname: 'adam', 
-			lastname: 'hopkins',
-			address: {
-				street: '23 frome road',
-				city: 'london',
-				state: 'haringey'
-			}
+		// 	firstname: 'adam', 
+		// 	lastname: 'hopkins',
+		// 	address: {
+		// 		street: '23 frome road',
+		// 		city: 'london',
+		// 		state: 'haringey'
+		// 	}
 
-		};
+		// };
 
-		console.log(person);
+		// function greet(person) {
+		// 	console.log('hi' + person.firstname);
+		// }
 
+		// console.log(person);
+
+
+		function greet() {
+			console.log('hi');
+		}
+		greet.language = 'english'
 
 };
 return method;
