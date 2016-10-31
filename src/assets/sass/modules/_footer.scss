@@ -1,39 +1,28 @@
-// footer {
-// 	display:flex;
-// 	color:$link-color;
-// 	@include breakpoint(desktop) {
-// 		background:#000;
-// 	}
-// }
-
-
 footer {
-	height:550px;
-	background-color:#fff;
-	font-size: 20px;
-	color:#000;
-	margin: 0px auto;
-	text-align: center;
-	margin: em(20px);
-
-	img {
-		display: block;
-		margin:0px auto;
-	}
-
-	ul {
-		width: 100%;
-		list-style-type:none;
-
-		li {
-			margin: em(10px);
-			display: inline-block;
-			border: 2px dotted #000;
-			width: 33.333%;
-
-			h3,a {
-				display: inline;
-			}
-		}
-	}
+    height: 400px;
+    background-color: #fff;
+    font-size: 20px;
+    color: #000;
+    margin: 0px auto;
+    text-align: center;
+    .block {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: em(20px);
+        flex-flow: row wrap;
+        article {
+            border: 2px solid #000;
+            margin: em(10px);
+            flex-grow: 1;
+            max-width: 254px;
+            img {
+                margin: em(0px);
+            }
+            span {
+                display: block;
+                margin: em(4px);
+            }
+        }
+    }
 }
