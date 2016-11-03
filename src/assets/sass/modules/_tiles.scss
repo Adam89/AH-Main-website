@@ -1,109 +1,69 @@
-    #one {
-    width: 100%;
-    display: inline-flex;
-    overflow: hidden;
-    @media (max-width: 768px) {
-        display: block;
-    }
-    .tile-1 {
-        width: 50%;
-        background-image: url('/assets/images/pic01.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 250px;
-        overflow: hidden;
-        position: relative;
-        transition: all .2s ease-in-out;
-        &:before {
-            background-color: #6fc3df;
-            transition: opacity 0.5s ease;
-            bottom: 0;
-            content: '';
+    .one {
+        width: 100%;
+        @media (max-width: 768px) {
             display: block;
-            height: 100%;
-            left: 0;
-            opacity: 0.85;
-            position: absolute;
-            width: 100%;
-            z-index: 2;
+        }
+        &__tile {
+            width: 50%;
+            height: 250px;
+            display: inline-block;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
             overflow: hidden;
-        }
-         &:hover {
-                opacity: 0.5;
+            position: relative;
+            opacity: 0.75;
+            &--image1 {
+                background-image: url('/assets/images/pic01.jpg');
             }
-        &__colour--Orange {
-            &:before {
-                background-color: orange;
-                opacity: 0.85;
+            &--image2 {
+                background-image: url('/assets/images/pic02.jpg');
+            }
+            &--image3 {
+                background-image: url('/assets/images/pic02.jpg');
+            }
+            &--image4 {
+                background-image: url('/assets/images/pic01.jpg');
+            }
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+            h3 {
+                font-size: 40px;
+                width: 100%;
+                text-align: center;
+                color: $white;
+                padding-top: 110px;
+                padding-bottom: 110px;
+                &:hover {
+                    color: $black;
+                }
             }
         }
-        @media (max-width: 768px) {
-            width: 100%;
-        }
-        h3 {
-            position: absolute;
-            font-size: 40px;
-            z-index: 999999;
-            width: 100%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: $white;
+        &__tileOverlay {
+            cursor: pointer;
             &:hover {
-                color: $black;
+                box-shadow: inset 0 0 0 25px #fff;
             }
-        }
-    }
-}
-    .tile-2 {
-        width: 50%;
-        background-image: url('/assets/images/pic02.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 250px;
-        overflow: hidden;
-        position: relative;
-        &:before {
-            background-color: #8d82c4;
-            transition: opacity 0.5s ease;
-            bottom: 0;
-            content: '';
-            display: block;
-            height: 100%;
-            left: 0;
-            opacity: 0.85;
-            position: absolute;
-            width: 100%;
-            z-index: 2;
-        }
-         &:hover {
-                opacity: 0.5;
-            }
-        &__colour--red {
-            &:before {
-                background-color: red;
+            &--orange {
+                background-color: $tile4;
                 opacity: 0.85;
+                height: 250px;
             }
-        }
-        @media (max-width: 768px) {
-            width: 100%;
-        }
-        h3 {
-            position: absolute;
-            font-size: 40px;
-            z-index: 999999;
-            width: 100%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            padding: 10px;
-            color: $white;
-             &:hover {
-                color: $black;
+            &--blue {
+                background-color: $tile1;
+                opacity: 0.85;
+                height: 250px;
+            }
+            &--green {
+                background-color: $tile3;
+                opacity: 0.85;
+                height: 250px;
+            }
+            &--red {
+                opacity: 0.85;
+                height: 250px;
+                background-color: $tile2;
             }
         }
     }
