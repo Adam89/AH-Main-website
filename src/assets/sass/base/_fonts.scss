@@ -11,8 +11,35 @@
 }
 
 
+@font-face {
+    font-family: 'bombingregular';
+    src: url('../fonts/personal/bombing-webfont.woff2') format('woff2'),
+         url('../fonts/personal/bombing-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
-h1, h2, h3, h4, h5, a {
+}
+
+@font-face {
+    font-family: 'amv_antechamberregular';
+    src: url('../fonts/personal/amv-antechamber-webfont.woff2') format('woff2'),
+         url('../fonts/personal/amv-antechamber-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'a_dripping_markerregular';
+    src: url('../fonts/personal/adrip1-webfont.woff2') format('woff2'),
+         url('../fonts/personal/adrip1-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+h1, h2, h3, h4, h5, {
 	font-weight: normal;
 	font-family:$urban-jungle;
+    letter-spacing: 4px;
 }

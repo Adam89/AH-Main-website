@@ -30,6 +30,7 @@ module.exports = function(grunt) {
     dir.src.sass = dir.src.assets + '/sass';
     dir.src.images = dir.src.assets + '/images';
     dir.src.fonts = dir.src.assets + '/fonts';
+    dir.src.data = dir.src.assets + '/data';
 
     // Dev --------------------------------------------------------------------
     dir.dev.root = './dev';
@@ -39,6 +40,7 @@ module.exports = function(grunt) {
     dir.dev.css = dir.dev.assets + '/css';
     dir.dev.images = dir.dev.assets + '/images';
     dir.dev.fonts = dir.dev.assets + '/fonts';
+    dir.dev.data = dir.dev.assets + '/data';
 
     // Build ------------------------------------------------------------------
     dir.build.root = './build';
@@ -48,6 +50,7 @@ module.exports = function(grunt) {
     dir.build.css = dir.build.assets + '/css';
     dir.build.images = dir.build.assets + '/images';
     dir.build.fonts = dir.build.assets + '/fonts';
+    dir.build.data = dir.build.assets + '/data';
 
     grunt.initConfig({
 
@@ -110,6 +113,10 @@ module.exports = function(grunt) {
                 files: [dir.src.js + '/**/*.js'],
                 tasks: ['browserify'],
 
+            },
+            json: {
+                files: [dir.src.data + '/**/*.json'],
+                tasks: ['copy'],
             },
             sass: {
                 files: [dir.src.sass + '/**/*.scss'],
@@ -215,6 +222,7 @@ module.exports = function(grunt) {
 
         copy: {
             images__Dev: { cwd: dir.src.images, dest: dir.dev.images, expand: true, src: '**' },
+            json__Dev: { cwd: dir.src.data, dest: dir.dev.data, expand: true, src: '**' },
             fonts__Dev: { cwd: dir.src.fonts, dest: dir.dev.fonts, expand: true, src: '**' },
 
             images__Build: { cwd: dir.src.images, dest: dir.build.images, expand: true, src: '**' },
@@ -263,6 +271,7 @@ module.exports = function(grunt) {
         'clean:dev',
         'copy:images__Dev',
         'copy:fonts__Dev',
+        'copy:json__Dev',
         'browserify:dev',
         'assemble:dev',
         'sass:dev',

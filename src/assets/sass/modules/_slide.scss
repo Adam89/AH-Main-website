@@ -11,14 +11,16 @@
             line-height: 300px;
             color: #fff;
             font-size: 30px;
-            &.red {
-                background-image: url("http://www.placecage.com/gif/550/300");
+            font-family: $urban-jungle;
+            letter-spacing: 4px;
+            &--red {
+                background-image: url("http://placehold.it/500x300");
             }
-            &.green {
-                background-image: url("http://www.placecage.com/gif/550/300");
+            &--green {
+                background-image: url("http://placehold.it/500x300");
             }
-            &.blue {
-                background-image: url("http://www.placecage.com/gif/550/300");
+            &--blue {
+                background-image: url("http://placehold.it/500x300");
             }
         }
     }
@@ -43,10 +45,8 @@
         display: inline-block;
         padding: 4px 8px;
         color: #fff;
-        background-color: #2a2f4a;
         margin: 0px auto;
         cursor: pointer;
         height: 55px;
-        opacity: 0.8;
     }
 }

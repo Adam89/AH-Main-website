@@ -7,12 +7,12 @@ function test() {
 
     method.init = function() {
 
-        method.functionTest();
+        method.ajaxTest();
     };
 
 
 
-	method.functionTest = function() {
+	method.ajaxTest = function() {
 
 		// var person = {
 
@@ -32,13 +32,31 @@ function test() {
 
 		// console.log(person);
 
+// var tom = document.getElementById('getData');
 
-		function greet() {
-			console.log('hi');
-		}
-		greet.language = 'english'
+// var root = 'http://jsonplaceholder.typicode.com';
 
+// $(tom).click(function(event) {
+//     $.ajax({
+//         url: root + '/posts/',
+//         method: 'GET'
+//     }).then(function(data) {
+
+//         for (var i = 0; i < data.length; i++) {
+//             console.log(data[i].title);
+
+//             var adam = '<div style="width: 100%; background: black; color: #fff; text-align:center; padding: 10px; max-width: 960px; margin: auto; "><span>' + data[i].title + '"</div></div>';
+
+//             $('#lists').css('display:block');
+//             $('#lists').append(adam);
+//         }
+//     });
+// });
 };
+
+
+
+//     
 return method;
 
 }

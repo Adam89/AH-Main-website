@@ -5,6 +5,7 @@ footer {
     color: #000;
     margin: 0px auto;
     text-align: center;
+    font-family: $drip;
     .block {
         display: flex;
         flex-direction: row;
@@ -15,8 +16,9 @@ footer {
             border: 2px solid #000;
             margin: em(10px);
             flex-grow: 1;
-            max-width: 254px;
-            height: 200px;
+            max-width: 300px;
+            height: 220px;
+            position: relative;
             &:hover {
                 transform: scale(1.1);
             }
@@ -31,13 +33,23 @@ footer {
             &--colour2 {
                 background-color: $tile3;
                 opacity: 0.75;
-
             }
             h1 {
                 padding-top: 50px;
                 padding-bottom: 50px;
                 font-size: em(60px);
                 color: $white;
+                font-family: $drip;
+            }
+            p {
+                font-size: em(28px);
+                text-decoration: underline;
+                font-family: $drip;
+                margin: em(2px);
+                @media (max-width: 768px) {
+                    font-size: em(22px);
+                    padding-top: 2px;
+                }
             }
         }
     }
@@ -48,11 +60,11 @@ footer {
     height: 70px;
     text-align: center;
     background-color: $header-color;
-    margin-top:20px;
-
+    margin-top: 20px;
     h2 {
         color: $white;
-        padding-top: 25px;
-                padding-bottom: 25px;
+        padding-top: 15px;
+        font-family: $drip;
+        font-size: em(35px);
     }
 }

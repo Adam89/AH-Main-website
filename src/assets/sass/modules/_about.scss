@@ -1,0 +1,19 @@
+#about {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    h1 {
+        color: $black;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: em(5px);
+    }
+    p {
+        font-size: 20px;
+        color: $black;
+        margin: 10px;
+        font-family: $ante;
+        letter-spacing: 4px;
+        }
+    }
+
