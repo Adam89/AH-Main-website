@@ -1,33 +1,32 @@
 .slider-container {
-    position: relative;
     .slider {
+        height: 250px;
         width: 100%;
-        height: 300px;
-        margin: auto;
         .item {
-            width: 100%;
+            width: 250px;
             height: 100%;
             text-align: center;
-            line-height: 300px;
             color: #fff;
             font-size: 30px;
             font-family: $urban-jungle;
             letter-spacing: 4px;
-            &--red {
-                background-image: url("http://placehold.it/500x300");
-            }
-            &--green {
-                background-image: url("http://placehold.it/500x300");
-            }
-            &--blue {
-                background-image: url("http://placehold.it/500x300");
-            }
+            max-width: 250px !important;
+            // &--red {
+            //     background-image: url("http://placehold.it/500x300");
+            // }
+            // &--green {
+            //     background-image: url("http://placehold.it/500x300");
+            // }
+            // &--blue {
+            //     background-image: url("http://placehold.it/500x300");
+            // }
         }
     }
 }
 
 .controllers {
     text-align: center;
+    background-color:black;
     .prev {
         position: absolute;
         bottom: 50%;

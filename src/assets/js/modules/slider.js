@@ -18,7 +18,6 @@ function slider() {
         slidesToShow: 2,
         slidesToScroll: 2,
         autoplay: true,
-        autoplaySpeed: 1500,
         prevArrow: '.controllers .prev',
         nextArrow: '.controllers .next',
         responsive: [{

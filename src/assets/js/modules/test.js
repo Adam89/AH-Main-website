@@ -1,5 +1,7 @@
 module.exports = test;
 
+var slider = require('./slider')();
+
 function test() {
     'use strict';
 
@@ -12,55 +14,49 @@ function test() {
 
 
 
-	method.ajaxTest = function() {
+method.ajaxTest = function() {
 
-		// var person = {
+    var tom = document.getElementById('buttonHolder');
 
-		// 	firstname: 'adam', 
-		// 	lastname: 'hopkins',
-		// 	address: {
-		// 		street: '23 frome road',
-		// 		city: 'london',
-		// 		state: 'haringey'
-		// 	}
+    var apiKey = '3712852-edb0373b46785a73b59c6d352';
 
-		// };
+    var root = "https://pixabay.com/api/?key=" + apiKey + "&q=('pizza')" + "&lang=en" + "&orientation=horizontal" + "&min_width=500" + "&min_height=300" + "&userImageURL";
 
-		// function greet(person) {
-		// 	console.log('hi' + person.firstname);
-		// }
+    // var img = $("<img />").attr('src', + hit.pageURL);
 
-		// console.log(person);
+    // $('#buttonHolder').text(hit.webformatURL);
+    $(document).ready(function(tom) {
 
-// var tom = document.getElementById('getData');
+        $.ajax({
+            url: root,
+            method: 'GET',
 
-// var root = 'http://jsonplaceholder.typicode.com';
+        }).then(function(data) {
 
-// $(tom).click(function(event) {
-//     $.ajax({
-//         url: root + '/posts/',
-//         method: 'GET'
-//     }).then(function(data) {
+            if (parseInt(data.totalHits) > 0) {
 
-//         for (var i = 0; i < data.length; i++) {
-//             console.log(data[i].title);
+                for (var i = 0; i < data.hits.length; i++) {
+                    data.hits[i].userImageURL;
 
-//             var adam = '<div style="width: 100%; background: black; color: #fff; text-align:center; padding: 10px; max-width: 960px; margin: auto; "><span>' + data[i].title + '"</div></div>';
+                    	var photoHTML = '<div class="item' + '" class="image"><img src="' + data.hits[i].userImageURL + '"></div>';
 
-//             $('#lists').css('display:block');
-//             $('#lists').append(adam);
-//         }
-//     });
-// });
+		                    $('.slider').append(photoHTML);
+
+                }
+
+                slider.init();
+            }
+            else
+            console.log('No hits');
+
+        });
+    });
 };
+     
+	return method;
 
+	}
 
-
-//     
-return method;
-
-}
- 
 
 
   // 	var myModule = {
